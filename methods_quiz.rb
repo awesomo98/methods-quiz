@@ -1,6 +1,12 @@
 module MethodsQuiz
 	
-	# TODO - write has_teen?
+	def has_teen?(a,b,c)
+		if (a >= 13 && 19 >= a) || (b >= 13 && 19 >= b) || (c >= 13 && 19 >= c)
+			return true
+		else
+			return false
+		end
+	end
 	
 	# TODO - write not_string
 	
