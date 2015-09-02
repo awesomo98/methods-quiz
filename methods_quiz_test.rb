@@ -19,4 +19,17 @@ class MethodsQuizTest < MiniTest::Test
 		assert_equal true, @m.has_teen?(14,16,19)
 	end
 
+	def test_not_string
+		assert_equal 
+	end
+
+	def test_icy_hot
+		assert_equal false, @m.icy_hot(5,50)
+		assert_equal false, @m.icy_hot(0,62)
+		assert_equal false, @m.icy_hot(23,100)
+		assert_equal true, @m.icy_hot(-50,150)
+		assert_equal true, @m.icy_hot(2560,-1)
+		assert_equal true, @m.icy_hot(99,-56)
+	end
+
 end
