@@ -19,9 +19,9 @@ class MethodsQuizTest < MiniTest::Test
 		assert_equal true, @m.has_teen?(14,16,19)
 	end
 
-	def test_not_string
-		assert_equal 
-	end
+	#def test_not_string
+	#	assert_equal 
+	#end
 
 	def test_icy_hot
 		assert_equal false, @m.icy_hot(5,50)
@@ -30,6 +30,12 @@ class MethodsQuizTest < MiniTest::Test
 		assert_equal true, @m.icy_hot(-50,150)
 		assert_equal true, @m.icy_hot(2560,-1)
 		assert_equal true, @m.icy_hot(101,-56)
+	end
+
+	def test_closer_to
+		assert_equal 3, @m.closer_to(5,3,10)
+		assert_equal 16, @m.closer_to(15,20,16)
+		assert_equal 0, @m.closer_to(13,15,11)
 	end
 
 end
