@@ -19,9 +19,10 @@ class MethodsQuizTest < MiniTest::Test
 		assert_equal true, @m.has_teen?(14,16,19)
 	end
 
-	#def test_not_string
-	#	assert_equal 
-	#end
+	def test_not_string
+		assert_equal "notfun", @m.not_string?("notfun")
+		assert_equal "notfun", @m.not_string?("fun")
+	end
 
 	def test_icy_hot
 		assert_equal false, @m.icy_hot(5,50)
@@ -41,6 +42,13 @@ class MethodsQuizTest < MiniTest::Test
 	def two_as_one
 		assert_equal false, @m.closer_to(1,2,4)
 		assert_equal true, @m.closer_to(1,2,3)
+	end
+
+	def test_pig_latinify
+		assert_equal "ilalbay", @m.pig_latinify("bilal")
+		assert_equal "upcay", @m.pig_latinify("cup")
+		assert_equal "appleway", @m.pig_latinify("apple")
+		assert_equal "rillgay", @m.pig_latinify("grill")
 	end
 
 end
