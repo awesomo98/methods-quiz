@@ -8,7 +8,7 @@ module MethodsQuiz
 		end
 	end
 	
-	def not_string?(str)
+		def not_string?(str)
 		if(str.start_with?("not"))
 			return str
 		else
@@ -36,7 +36,11 @@ module MethodsQuiz
 		end
 	end
 
-	# TODO - write two_as_one?
+	def two_as_one?(a,b,c)
+		if (a + b == c) || (b + c == a) || (a + c == b)
+			return true
+		end
+	end
 
 	def pig_latinify(str)
 		str.downcase!
